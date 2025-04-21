@@ -1,4 +1,5 @@
 const express = require('express');
+const { sendResponse } = require('../middleware/middleware');
 const router = express.Router();
 const resetposts = () => { posts = []; };
 let posts = [];

@@ -1,9 +1,10 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const userRoutes = require('./Route/UserRoute');
 const postRoutes = require('./Route/postRoute');
  // fixed path
- 
+dotenv.config();
 const app = express();
 const port = 3000;
  
@@ -13,6 +14,7 @@ app.use(bodyParser.json());
 // In-memory user data store
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
+app.use("/user/auth", userAuthRoutes);
  
 // Start the server
 app.listen(port, () => {
