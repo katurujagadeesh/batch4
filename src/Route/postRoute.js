@@ -2,14 +2,8 @@ const express = require('express');
 const { sendResponse } = require('../middleware/middleware');
 const router = express.Router();
 const resetposts = () => { posts = []; };
+
 let posts = [];
-const sendResponse = (res, statusCode, message, data = null) => {
-    return res.status(statusCode).json({
-        statusCode,
-        message,
-        data,
-    });
-};
  
 // Create post
 router.post('/', (req, res) => {

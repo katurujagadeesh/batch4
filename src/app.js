@@ -3,6 +3,9 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const userRoutes = require('./Route/UserRoute');
 const postRoutes = require('./Route/postRoute');
+const userAuthRoutes = require('./Route/userAuthRoute');
+
+
  // fixed path
 dotenv.config();
 const app = express();
