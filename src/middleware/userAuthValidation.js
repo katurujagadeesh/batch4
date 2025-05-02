@@ -25,6 +25,9 @@ const verifyOtpSchema = Joi.object({
     email: Joi.string().email().required(),
     otp: Joi.number().integer().required(),
 })
+const resetPasswordSchema = Joi.object({
+    email: Joi.string().email().required(),
+    newPassword: Joi.string().required()
+})
  module.exports = {
-    validate,registerSchema,loginSchema,forgotPasswordSchema,verifyOtpSchema
- }
+    validate,registerSchema,loginSchema,forgotPasswordSchema,verifyOtpSchema,resetPasswordSchema,}
